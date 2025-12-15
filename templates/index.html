@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical AI Assistant</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-header">
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M12 21a9 9 0 0 0 9-9c0-4.97-4.03-9-9-9s-9 4.03-9 9 0 0 0 9 9Z"
+            />
+            <path d="M12 7v4" />
+            <path d="M12 11h-4" />
+            <path d="M8 11h4" />
+            <path d="M12 11h4" />
+            <path d="M16 11h-4" />
+            <path d="M12 11v4" />
+          </svg>
+        </div>
+        <div class="header-info">
+          <h1>7la2 els7a</h1>
+          <p>Just pure confidence and random facts</p>
+        </div>
+      </header>
+
+      <main class="chat-messages" id="msgs">
+        <div class="message bot">
+          <div class="msg-content">
+            Hi i am 7la2 els7a, and i am gonna answer your questions without a medical degree.
+          </div>
+          <div class="msg-time">Just now</div>
+        </div>
+      </main>
+
+      <footer class="chat-input-area">
+        <form id="chatForm">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Type your health question..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="sendBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </form>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
